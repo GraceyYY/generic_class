@@ -3,6 +3,10 @@ import java.util.*;
 public class MyMap<T> {
     private Map<String, T> map;
 
+    public MyMap() {
+        this.map = new HashMap<>();
+    }
+
     public Map<String, T> getMap() {
         return this.map;
     }
