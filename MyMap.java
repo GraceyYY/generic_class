@@ -6,6 +6,17 @@ public class MyMap<T> {
     public MyMap() {
         this.map = new HashMap<>();
     }
+    
+    @Override
+    public String toString() {
+        String result = "{\n";
+        for (Map.Entry pair : map.entrySet()) {
+            result = result + pair + ",\n";
+        }
+
+        result += "}";
+        return result;
+    }
 
     public Map<String, T> getMap() {
         return this.map;
