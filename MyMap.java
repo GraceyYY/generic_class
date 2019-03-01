@@ -11,4 +11,15 @@ public class MyMap<T> {
         this.map = map;
     }
 
+    public T save(String id, T value) {
+        return map.put(id, value);
+    }
+
+    public T delete(String id) {
+        return map.remove(id);
+    }
+
+    public T edit(String id, T newValue) {
+        return map.replace(id, newValue);
+    }
 }
