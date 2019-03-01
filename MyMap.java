@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class MyMap<T> {
     private Map<String, T> map;
@@ -53,5 +50,7 @@ public class MyMap<T> {
         return map.entrySet();
     }
 
-    
+    public TreeMap<String, T> sort() {
+        return new TreeMap<>(map);
+    }
 }
