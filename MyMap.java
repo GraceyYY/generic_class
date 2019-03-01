@@ -53,4 +53,16 @@ public class MyMap<T> {
     public TreeMap<String, T> sort() {
         return new TreeMap<>(map);
     }
+
+    public boolean isEmpty() {
+        return map.isEmpty();
+    }
+
+    public int size() {
+        return map.size();
+    }
+
+    public boolean containsId(String id) {
+        return map.containsKey(id);
+    }
 }
