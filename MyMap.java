@@ -6,11 +6,11 @@ public class MyMap<T> {
     public MyMap() {
         this.map = new HashMap<>();
     }
-    
+
     @Override
     public String toString() {
         String result = "{\n";
-        for (Map.Entry pair : map.entrySet()) {
+        for (Map.Entry pair : this.map.entrySet()) {
             result = result + pair + ",\n";
         }
 
@@ -27,25 +27,25 @@ public class MyMap<T> {
     }
 
     public T save(String id, T value) {
-        return map.put(id, value);
+        return this.map.put(id, value);
     }
 
     public T delete(String id) {
-        return map.remove(id);
+        return this.map.remove(id);
     }
 
     public T edit(String id, T newValue) {
-        return map.replace(id, newValue);
+        return this.map.replace(id, newValue);
     }
 
     public T getValueOf(String id) {
-        return map.get(id);
+        return this.map.get(id);
     }
 
     public List<T> showValues() {
 
         List<T> values = new ArrayList<>();
-        for (T value : map.values()) {
+        for (T value : this.map.values()) {
             values.add(value);
         }
         return values;
@@ -54,7 +54,7 @@ public class MyMap<T> {
     public List<String> showIds() {
 
         List<String> ids = new ArrayList();
-        for (String id : map.keySet()) {
+        for (String id : this.map.keySet()) {
             ids.add(id);
         }
         return ids;
@@ -62,22 +62,22 @@ public class MyMap<T> {
 
     public Set<Map.Entry<String, T>> showPairs() {
 
-        return map.entrySet();
+        return this.map.entrySet();
     }
 
     public TreeMap<String, T> sort() {
-        return new TreeMap<>(map);
+        return new TreeMap<>(this.map);
     }
 
     public boolean isEmpty() {
-        return map.isEmpty();
+        return this.map.isEmpty();
     }
 
     public int size() {
-        return map.size();
+        return this.map.size();
     }
 
     public boolean containsId(String id) {
-        return map.containsKey(id);
+        return this.map.containsKey(id);
     }
 }
